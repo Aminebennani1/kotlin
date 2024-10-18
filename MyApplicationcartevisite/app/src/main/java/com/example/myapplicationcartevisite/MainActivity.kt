@@ -43,41 +43,41 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-val image = painterResource(R.drawable .delicieuses_pommes_rouges_isolees_blanc)
+    val image = painterResource(R.drawable .delicieuses_pommes_rouges_isolees_blanc)
     val image2 = painterResource(R.drawable.pikaso_edit__3_)
-Box {
-    Image(
-        painter = image2,
-        contentDescription = null,
-        modifier=Modifier.fillMaxSize(),
-        contentScale = ContentScale.Crop,
-
-        )
-    Column(
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.fillMaxSize().padding(top = 135.dp)
-
-    ) {
+    Box {
         Image(
-            painter = image,
-            modifier= Modifier.width(550.dp).height(200.dp),
+            painter = image2,
             contentDescription = null,
+            modifier=Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
 
             )
-        Text(
-            text = "Big Apple $name!",
-            modifier = modifier.padding(15.dp),
-            fontSize = 32.sp
+        Column(
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxSize().padding(top = 135.dp)
 
-        )
-        Text(
-            text = "Midelt est une ville située au centre du Maroc, dans la région de Drâa-Tafilalet, au pied du Moyen Atlas. Cette ville est connue pour plusieurs aspects, et l'un des produits phares de la région est la pomme de Midelt. ",
-            modifier = modifier.padding(15.dp),
+        ) {
+            Image(
+                painter = image,
+                modifier= Modifier.width(550.dp).height(200.dp),
+                contentDescription = null,
 
-        )
+                )
+            Text(
+                text = "Big Apple $name!",
+                modifier = modifier.padding(15.dp),
+                fontSize = 32.sp
+
+            )
+            Text(
+                text = "Midelt est une ville située au centre du Maroc, dans la région de Drâa-Tafilalet, au pied du Moyen Atlas. Cette ville est connue pour plusieurs aspects, et l'un des produits phares de la région est la pomme de Midelt. ",
+                modifier = modifier.padding(15.dp),
+
+                )
+        }
     }
-}
 
 
 }
